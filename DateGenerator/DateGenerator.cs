@@ -31,6 +31,9 @@ namespace DateGenerator
             EndDate = endDate;
             Days = days;
             Frequency = frequency;
+
+            Generate();
+
         }
 
         /// <summary>
@@ -38,7 +41,7 @@ namespace DateGenerator
         /// </summary>
         /// <param name="startDate">Start of generated sequence</param>
         /// <param name="endDate">End of generated sequence</param>
-        /// <param name="days">Array of string days in week</param>
+        /// <param name="days">Array of string days in week. Accepted values: 'Monday', 'Tuesday', 'Wednesday', 'Friday', 'Saturday', 'Sunday'</param>
         /// <param name="frequency">Accepted values: 'Weekly', 'Biweekly', 'Monthly'</param>
         public DateGenerator(DateTime startDate, DateTime endDate, string[] days, string frequency)
         {
@@ -50,8 +53,10 @@ namespace DateGenerator
             Generate();
         }
 
-        public void Generate()
+        public List<DateTime> Generate()
         {
+            Generated.Clear();
+
             foreach (var day in Days)
             {
                 var daysInRange = GetDaysInRange(day);
@@ -60,6 +65,8 @@ namespace DateGenerator
             }
             FilterRemainderDates();
             Generated = Generated.OrderByDescending(u => u.Date).ToList();
+
+            return Generated;
         }
 
         private void FilterRemainderDates()
