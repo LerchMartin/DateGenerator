@@ -17,10 +17,10 @@ public DateGenerator(DateTime startDate, DateTime endDate, string[] days, string
 
   var result = dateGenerator.Generated;
 ```
+---
 ```c#
 public DateGenerator(DateTime startDate, DateTime endDate, List<DayOfWeek> days, DateFrequency frequency)
  ```
----
   ```c#
   string[] days = new List<DayOfWeek> { DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday };
   string frequency = DateFrequency.Weekly;
