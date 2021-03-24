@@ -6,7 +6,6 @@ allows you to generate dates by specified days in week and DateFrequency between
 ```c#
 public DateGenerator(DateTime startDate, DateTime endDate, string[] days, string frequency)
  ```
- ---
 ```c#
   string[] days = new string[] { "Monday", "Wednesday", "Friday" };
   string frequency = "Weekly";
