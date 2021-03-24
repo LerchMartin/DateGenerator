@@ -3,7 +3,9 @@ Simple date generator for C#
 allows you to generate dates by specified days in week and DateFrequency between dates
 
 # Usage
- DateGenerator(DateTime startDate, DateTime endDate, string[] days, string frequency)
+```c#
+public DateGenerator(DateTime startDate, DateTime endDate, string[] days, string frequency)
+ ```
  ---
 ```c#
   string[] days = new string[] { "Monday", "Wednesday", "Friday" };
@@ -15,7 +17,9 @@ allows you to generate dates by specified days in week and DateFrequency between
 
   var result = dateGenerator.Generated;
 ```
- DateGenerator(DateTime startDate, DateTime endDate, List<DayOfWeek> days, DateFrequency frequency)
+```c#
+public DateGenerator(DateTime startDate, DateTime endDate, List<DayOfWeek> days, DateFrequency frequency)
+ ```
 ---
   ```c#
   string[] days = new List<DayOfWeek> { DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday };
