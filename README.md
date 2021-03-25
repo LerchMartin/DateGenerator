@@ -21,8 +21,8 @@ public DateGenerator(DateTime startDate, DateTime endDate, string[] days, string
 public DateGenerator(DateTime startDate, DateTime endDate, List<DayOfWeek> days, DateFrequency frequency)
  ```
   ```c#
-  string[] days = new List<DayOfWeek> { DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday };
-  string frequency = DateFrequency.Weekly;
+  var days = new List<DayOfWeek> { DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday };
+  var frequency = DateFrequency.Weekly;
   DateTime startDate = DateTime.Now;
   DateTime endDate = startDate.AddMonths(1);
 
